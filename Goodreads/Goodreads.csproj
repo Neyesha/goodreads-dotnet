@@ -1,20 +1,19 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.0.0.0</Version>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
+    <Version>1.0.2.0</Version>
     <Authors>Adam Krogh;Vladimir Rybalko</Authors>
     <Product>Goodreads</Product>
-    <PackageId>Goodreads</PackageId>
+    <PackageId>Neyesha.Goodreads</PackageId>
     <Description>Goodreads .NET API Client Library</Description>
     <Copyright>Copyright © 2016</Copyright>
-    <RepositoryUrl>https://github.com/adamkrogh/goodreads-dotnet</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/adamkrogh/goodreads-dotnet</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/adamkrogh/goodreads-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/Neyesha/goodreads-dotnet</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Neyesha/goodreads-dotnet</PackageProjectUrl>
     <PackageTags>goodreads api netstandard2</PackageTags>
     <CodeAnalysisRuleSet>..\Goodreads.ruleset</CodeAnalysisRuleSet>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,6 +22,5 @@
 
   <ItemGroup>
     <PackageReference Include="RestSharp" Version="106.2.1" />
-    <PackageReference Include="StyleCop.Analyzers" Version="1.0.2" />
   </ItemGroup>
 </Project>
