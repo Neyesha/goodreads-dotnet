@@ -27,8 +27,9 @@ namespace Goodreads.Clients
         /// Gets detailed information about the series, including all the works that belong to it.
         /// </summary>
         /// <param name="seriesId">The Goodreads id of the series.</param>
+        /// <param name="page">Page number for works list</param>
         /// <returns>Information about the series, including a list of works.</returns>
-        Task<Series> GetById(long seriesId);
+        Task<Series> GetById(long seriesId, int page = 1);
     }
 
     /// <summary>
