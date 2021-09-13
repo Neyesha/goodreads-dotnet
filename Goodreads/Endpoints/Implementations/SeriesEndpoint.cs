@@ -121,12 +121,14 @@ namespace Goodreads.Clients
         /// Gets detailed information about the series, including all the works that belong to it.
         /// </summary>
         /// <param name="seriesId">The Goodreads id of the series.</param>
+        /// <param name="page">Page number for works list</param>
         /// <returns>Information about the series, including a list of works.</returns>
-        public async Task<Series> GetById(long seriesId)
+        public async Task<Series> GetById(long seriesId, int page = 1)
         {
             var parameters = new List<Parameter>
             {
-                new Parameter { Name = "id", Value = seriesId, Type = ParameterType.UrlSegment }
+                new Parameter { Name = "id", Value = seriesId, Type = ParameterType.UrlSegment },
+                new Parameter { Name = "page", Value = page, Type = ParameterType.QueryString },
             };
 
             return await Connection.ExecuteRequest<Series>("series/show/{id}", parameters, null, "series").ConfigureAwait(false);
