@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Goodreads.Models.Response;
 
-namespace Goodreads.Clients
+namespace Goodreads.Endpoints.Interfaces
 {
     /// <summary>
     /// The client class for the user statuses endpoint of the Goodreads API.

@@ -1,13 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
+using Goodreads.Endpoints.Interfaces;
 using Goodreads.Helpers;
 using Goodreads.Http;
 using Goodreads.Models.Request;
 using Goodreads.Models.Response;
 using RestSharp;
 
-namespace Goodreads.Clients
+namespace Goodreads.Endpoints.Implementations
 {
     /// <summary>
     /// The client class for the Group endpoint of the Goodreads API.

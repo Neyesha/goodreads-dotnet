@@ -1,12 +1,13 @@
-﻿using Goodreads.Helpers;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using Goodreads.Endpoints.Interfaces;
+using Goodreads.Helpers;
 using Goodreads.Http;
 using Goodreads.Models.Request;
 using Goodreads.Models.Response;
 using RestSharp;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
-namespace Goodreads.Clients
+namespace Goodreads.Endpoints.Implementations
 {
     internal sealed class TopicsEndpoint : Endpoint, IOAuthTopicsEndpoint
     {

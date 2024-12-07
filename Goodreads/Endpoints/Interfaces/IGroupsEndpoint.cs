@@ -2,7 +2,7 @@
 using Goodreads.Models.Request;
 using Goodreads.Models.Response;
 
-namespace Goodreads.Clients
+namespace Goodreads.Endpoints.Interfaces
 {
     /// <summary>
     /// The client class for the Group endpoint of the Goodreads API.

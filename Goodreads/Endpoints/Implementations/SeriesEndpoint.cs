@@ -3,11 +3,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Xml.XPath;
+using Goodreads.Endpoints.Interfaces;
 using Goodreads.Http;
 using Goodreads.Models.Response;
 using RestSharp;
 
-namespace Goodreads.Clients
+namespace Goodreads.Endpoints.Implementations
 {
     /// <summary>
     /// The client class for the Series endpoint of the Goodreads API.

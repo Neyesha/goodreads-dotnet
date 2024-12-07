@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
+using Goodreads.Http.Tokens;
 
 namespace Goodreads.Http
 {

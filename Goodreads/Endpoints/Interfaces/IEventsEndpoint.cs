@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Goodreads.Models.Response;
 
-namespace Goodreads.Clients
+namespace Goodreads.Endpoints.Interfaces
 {
     /// <summary>
     /// API client for the Events endpoint.

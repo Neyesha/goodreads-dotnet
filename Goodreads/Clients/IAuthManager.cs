@@ -1,7 +1,7 @@
-﻿using Goodreads.Http;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using Goodreads.Http.Tokens;
 
-namespace Goodreads
+namespace Goodreads.Clients
 {
     /// <summary>
     /// Define behavior for OAuth authorization and getting the Goodreads access token.

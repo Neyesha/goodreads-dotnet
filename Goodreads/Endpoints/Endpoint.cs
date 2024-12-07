@@ -1,6 +1,6 @@
 ﻿using Goodreads.Http;
 
-namespace Goodreads.Clients
+namespace Goodreads.Endpoints
 {
     internal abstract class Endpoint
     {

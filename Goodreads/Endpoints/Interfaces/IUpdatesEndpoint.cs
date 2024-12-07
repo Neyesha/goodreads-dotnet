@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Goodreads.Models.Request;
 using Goodreads.Models.Response;
 
-namespace Goodreads.Clients
+namespace Goodreads.Endpoints.Interfaces
 {
     /// <summary>
     /// The OAuth API client class for the Updates endpoint of the Goodreads API.

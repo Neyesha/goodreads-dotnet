@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Goodreads.Endpoints.Interfaces;
 using Goodreads.Http;
 using Goodreads.Models.Response;
 using RestSharp;
 
-namespace Goodreads.Clients
+namespace Goodreads.Endpoints.Implementations
 {
     /// <summary>
     /// API client for notification endpoint.

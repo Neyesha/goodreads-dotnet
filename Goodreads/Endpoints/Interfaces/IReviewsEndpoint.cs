@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Goodreads.Models.Request;
 using Goodreads.Models.Response;
 
-namespace Goodreads.Clients
+namespace Goodreads.Endpoints.Interfaces
 {
     /// <summary>
     /// The client interface for the Review endpoint of the Goodreads API.

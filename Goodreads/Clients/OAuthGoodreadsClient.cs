@@ -1,6 +1,7 @@
-﻿using Goodreads.Clients;
+﻿using Goodreads.Endpoints.Implementations;
+using Goodreads.Endpoints.Interfaces;
 
-namespace Goodreads
+namespace Goodreads.Clients
 {
     /// <summary>
     /// The authorized client API class for accessing the OAuth Goodreads API.

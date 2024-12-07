@@ -1,15 +1,16 @@
-﻿using Goodreads.Helpers;
-using Goodreads.Http;
-using Goodreads.Models.Request;
-using Goodreads.Models.Response;
-using RestSharp;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Xml.XPath;
+using Goodreads.Endpoints.Interfaces;
+using Goodreads.Helpers;
+using Goodreads.Http;
+using Goodreads.Models.Request;
+using Goodreads.Models.Response;
+using RestSharp;
 
-namespace Goodreads.Clients
+namespace Goodreads.Endpoints.Implementations
 {
     /// <summary>
     /// The client class for the Users endpoint of the Goodreads API.

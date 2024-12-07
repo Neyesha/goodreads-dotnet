@@ -1,8 +1,9 @@
-﻿using Goodreads.Clients;
-using Goodreads.Http;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using Goodreads.Endpoints.Implementations;
+using Goodreads.Endpoints.Interfaces;
+using Goodreads.Http.Tokens;
 
-namespace Goodreads
+namespace Goodreads.Clients
 {
     /// <summary>
     /// The unauthorized client API class for accessing the Goodreads API.

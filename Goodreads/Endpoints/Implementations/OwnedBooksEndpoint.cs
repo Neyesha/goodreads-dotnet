@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
+using Goodreads.Endpoints.Interfaces;
 using Goodreads.Http;
 using Goodreads.Models.Response;
 using RestSharp;
 
-namespace Goodreads.Clients
+namespace Goodreads.Endpoints.Implementations
 {
     internal sealed class OwnedBooksEndpoint : IOAuthOwnedBooksEndpoint
     {

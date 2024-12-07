@@ -1,4 +1,4 @@
-﻿namespace Goodreads.Http
+﻿namespace Goodreads.Http.Tokens
 {
     public class OAuthAccessToken : OAuthToken
     {

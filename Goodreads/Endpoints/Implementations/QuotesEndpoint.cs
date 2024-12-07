@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
+using Goodreads.Endpoints.Interfaces;
 using Goodreads.Http;
 using RestSharp;
 
-namespace Goodreads.Clients
+namespace Goodreads.Endpoints.Implementations
 {
     /// <summary>
     /// The client class for the Quotes endpoint of the Goodreads API.

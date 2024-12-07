@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Goodreads.Clients
+namespace Goodreads.Endpoints.Interfaces
 {
     /// <summary>
     /// The client class for the Quotes endpoint of the Goodreads API.

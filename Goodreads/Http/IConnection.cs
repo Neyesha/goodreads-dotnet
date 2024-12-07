@@ -2,6 +2,7 @@
 using RestSharp;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Goodreads.Http.Tokens;
 
 namespace Goodreads.Http
 {

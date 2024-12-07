@@ -1,6 +1,6 @@
 ﻿using Goodreads.Http;
 
-namespace Goodreads
+namespace Goodreads.Clients
 {
     /// <summary>
     /// The client API class for accessing the Goodreads API.

@@ -1,6 +1,6 @@
-﻿using Goodreads.Clients;
+﻿using Goodreads.Endpoints.Interfaces;
 
-namespace Goodreads
+namespace Goodreads.Clients
 {
     /// <summary>
     /// The API interface for accessing the Goodreads API.

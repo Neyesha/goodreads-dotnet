@@ -1,6 +1,6 @@
 ﻿using Goodreads.Http;
 
-namespace Goodreads
+namespace Goodreads.Clients
 {
     /// <summary>
     /// Provide info about current API Goodreads credentials.
