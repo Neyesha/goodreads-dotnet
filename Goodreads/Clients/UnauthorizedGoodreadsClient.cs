@@ -13,18 +13,18 @@ namespace Goodreads.Clients
         public UnauthorizedGoodreadsClient(string apiKey, string apiSecret, string accessToken, string accessSecret)
             : base(apiKey, apiSecret, accessToken, accessSecret)
         {
-            Authors = new AuthorsEnpoint(_connection);
-            Books = new BooksEndpoint(_connection);
-            Shelves = new ShelvesEndpoint(_connection);
-            Users = new UsersEndpoint(_connection);
-            Reviews = new ReviewsEndpoint(_connection);
-            Series = new SeriesEndpoint(_connection);
-            Events = new EventsEndpoint(_connection);
-            Groups = new GroupsEndpoint(_connection);
-            UserStatuses = new UserStatusesEndpoint(_connection);
-            ReadStatuses = new ReadStatusesEndpoint(_connection);
-            Comments = new CommentsEndpoint(_connection);
-            Topics = new TopicsEndpoint(_connection);
+            Authors = new AuthorsEnpoint(Connection);
+            Books = new BooksEndpoint(Connection);
+            Shelves = new ShelvesEndpoint(Connection);
+            Users = new UsersEndpoint(Connection);
+            Reviews = new ReviewsEndpoint(Connection);
+            Series = new SeriesEndpoint(Connection);
+            Events = new EventsEndpoint(Connection);
+            Groups = new GroupsEndpoint(Connection);
+            UserStatuses = new UserStatusesEndpoint(Connection);
+            ReadStatuses = new ReadStatusesEndpoint(Connection);
+            Comments = new CommentsEndpoint(Connection);
+            Topics = new TopicsEndpoint(Connection);
         }
 
         public IAuthorsEndpoint Authors { get; }
@@ -53,12 +53,12 @@ namespace Goodreads.Clients
 
         public async Task<OAuthRequestToken> AskCredentials(string callbackUrl)
         {
-            return await _connection.GetRequestToken(callbackUrl).ConfigureAwait(false);
+            return await Connection.GetRequestToken(callbackUrl).ConfigureAwait(false);
         }
 
         public async Task<OAuthAccessToken> GetAccessToken(OAuthRequestToken token)
         {
-            return await _connection.GetAccessToken(token).ConfigureAwait(false);
+            return await Connection.GetAccessToken(token).ConfigureAwait(false);
         }
 
         public async Task<OAuthAccessToken> GetAccessToken(string token, string secret)

@@ -117,7 +117,7 @@ namespace Goodreads.Endpoints.Implementations
 
             if (order.HasValue)
             {
-                addQueryString(EnumHelpers.QueryParameterKey<Order>(), EnumHelpers.QueryParameterValue(sort.Value));
+                addQueryString(EnumHelpers.QueryParameterKey<Order>(), EnumHelpers.QueryParameterValue(order.Value));
             }
 
             if (page.HasValue)
@@ -210,6 +210,7 @@ namespace Goodreads.Endpoints.Implementations
                 }
                 catch
                 {
+                    // ignore
                 }
             }
 

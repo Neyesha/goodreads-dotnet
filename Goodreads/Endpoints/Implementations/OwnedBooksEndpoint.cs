@@ -11,7 +11,7 @@ namespace Goodreads.Endpoints.Implementations
 {
     internal sealed class OwnedBooksEndpoint : IOAuthOwnedBooksEndpoint
     {
-        private readonly IConnection Connection;
+        private readonly IConnection _connection;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="OwnedBooksEndpoint"/> class.
@@ -19,7 +19,7 @@ namespace Goodreads.Endpoints.Implementations
         /// <param name="connection">A RestClient connection to the Goodreads API.</param>
         public OwnedBooksEndpoint(IConnection connection)
         {
-            Connection = connection;
+            _connection = connection;
         }
 
         public async Task<PaginatedList<OwnedBook>> GetOwnedBooks(long userId, int page)
@@ -32,7 +32,7 @@ namespace Goodreads.Endpoints.Implementations
                 new Parameter { Name = "page", Value = page, Type = ParameterType.QueryString }
             };
 
-            return await Connection.ExecuteRequest<PaginatedList<OwnedBook>>(endpoint, parameters, null, "owned_books").ConfigureAwait(false);
+            return await _connection.ExecuteRequest<PaginatedList<OwnedBook>>(endpoint, parameters, null, "owned_books").ConfigureAwait(false);
         }
 
         /// <summary>
@@ -44,7 +44,7 @@ namespace Goodreads.Endpoints.Implementations
         {
             var endpoint = $"owned_books/show/{ownedBookId}";
 
-            return await Connection.ExecuteRequest<OwnedBook>(endpoint, new List<Parameter>(), null, "owned_book/owned_book").ConfigureAwait(false);
+            return await _connection.ExecuteRequest<OwnedBook>(endpoint, new List<Parameter>(), null, "owned_book/owned_book").ConfigureAwait(false);
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace Goodreads.Endpoints.Implementations
                 parameters.Add(new Parameter { Name = "owned_book[unique_code]", Value = bcid, Type = ParameterType.QueryString });
             }
 
-            return await Connection.ExecuteRequest<OwnedBookSummary>(endpoint, parameters, null, "owned-book", Method.POST).ConfigureAwait(false);
+            return await _connection.ExecuteRequest<OwnedBookSummary>(endpoint, parameters, null, "owned-book", Method.POST).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -104,7 +104,7 @@ namespace Goodreads.Endpoints.Implementations
         public async Task<bool> DeleteOwnedBook(long ownedBookId)
         {
             var endpoint = $"owned_books/destroy/{ownedBookId}";
-            var response = await Connection.ExecuteRaw(endpoint, null, Method.POST).ConfigureAwait(false);
+            var response = await _connection.ExecuteRaw(endpoint, null, Method.POST).ConfigureAwait(false);
 
             return response.StatusCode == HttpStatusCode.NoContent;
         }

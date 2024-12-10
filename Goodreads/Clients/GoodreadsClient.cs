@@ -8,7 +8,7 @@ namespace Goodreads.Clients
     public abstract class GoodreadsClient : IApiCredentialsInfoManager
     {
 #pragma warning disable SA1401 // Fields must be private
-        internal readonly IConnection _connection;
+        internal readonly IConnection Connection;
 #pragma warning restore SA1401 // Fields must be private
 
         /// <summary>
@@ -38,12 +38,12 @@ namespace Goodreads.Clients
         protected GoodreadsClient(string apiKey, string apiSecret, string accessToken, string accessSecret)
         {
             var apiCredentials = new ApiCredentials(apiKey, apiSecret, accessToken, accessSecret);
-            _connection = new Connection(apiCredentials);
+            Connection = new Connection(apiCredentials);
         }
 
         public ApiCredentials GetCredentials()
         {
-            return _connection.Credentials;
+            return Connection.Credentials;
         }
     }
 }

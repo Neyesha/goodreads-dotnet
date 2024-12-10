@@ -16,7 +16,7 @@ namespace Goodreads.Extensions
 
             return string.IsNullOrWhiteSpace(el?.Value)
                 ? null
-                : (trim ? el.Value.Trim() : el.Value);
+                : trim ? el.Value.Trim() : el.Value;
         }
 
         public static long ElementAsLong(this XElement element, XName name)

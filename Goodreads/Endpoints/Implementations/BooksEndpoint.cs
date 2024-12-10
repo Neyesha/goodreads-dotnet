@@ -135,7 +135,7 @@ namespace Goodreads.Endpoints.Implementations
         /// <returns>A Goodreads book id if found, null otherwise.</returns>
         public async Task<long?> GetBookIdForIsbn(string isbn)
         {
-            var bookIds = await this.GetBookIdsForIsbns(new List<string> { isbn });
+            var bookIds = await GetBookIdsForIsbns(new List<string> { isbn });
             return bookIds?.FirstOrDefault();
         }
 
